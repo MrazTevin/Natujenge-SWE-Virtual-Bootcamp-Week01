@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+/* body {
+    background-color: red;
+} */
+
+ .about-team  {
+    padding: 70px;
+    background-color:#f9f9f9;
+}
+
+.team-section {
+    padding: 70px;
+}
+
+
+.about-team > p {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.bio-title {
+    padding-bottom: 20px;
+} 
+
+
+
