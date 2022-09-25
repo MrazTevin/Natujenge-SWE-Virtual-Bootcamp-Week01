@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+/* body {
+    background-color: red;
+} */
+
+ .about-team  {
+    padding: 70px;
+    background-color:#f9f9f9;
+}
+
+.team-section {
+    padding: 70px;
+}
+
+
+.about-team > p {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.bio-title {
+    padding-bottom: 20px;
+} 
+
+.first-row  {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: fit-content;
+    min-height: 75px;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0px;
+    /* padding-right: 30px; */
+}
+
+.second-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.img-wrapper{
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-right-radius:6px;
+    border-bottom-left-radius:6px;
+  }
+
+  .team-card {
+    justify-content: space-evenly;
+  }
+.team-section{
+    max-width: 1380px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -30px;
+    padding-top: 0px;
+    padding-right: 40px;
+    padding-bottom: 0px;
+    padding-left: 40px; 
+    text-align: center;
+    min-height: 75px;
+}
+
+.container-content {
+    font-size:15px;
+    line-height:25px;
+    font-weight:900;
+    text-align:center;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:70px;
+    margin-left:0px
+}
+
+.container-content > p {
+    padding-top: 0px;
+}
+
+.team-img {
+   width: 201px;
+   height: 192px;
+   object-fit: cover;
+   object-position: 50% 50%;
+}
