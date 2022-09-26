@@ -98,12 +98,52 @@ a:link {
     margin-bottom: 0px;
   }
 
-
-  tr.topics {
-    background-color:#1db483;
-    color:white;
+ 
+  #style-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   }
 
+  td {
+    border-style: hidden !important;
+  }
+  #style-table tr {
+    /* background-color: #009879; */
+    /* color: #ffffff; */
+    text-align: left;
+  }
+
+  #style-table thead tr {
+    /* background-color: #009879; */
+    color: #ffffff;
+    text-align: center;
+    padding-top: 30px;
+}
+
+  #style-table td, th{
+    padding: 12px 15px;
+  }
+  #style-table tbody tr.topics {
+    background-color:#1db483;
+    color:white;
+    font-weight: bold;
+    text-align: justify;
+  }
+
+  #styled-table tbody tr {
+    border-bottom:none;
+      }
+
+#styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
   table th {
     color: black;
     text-align: center;
@@ -161,6 +201,7 @@ input[type=submit]:hover {
 form {
   width: 100%;
   padding-left: 50px;
+  margin-top: 5px;
 }
 
 .position {
