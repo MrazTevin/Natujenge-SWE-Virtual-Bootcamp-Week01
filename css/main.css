@@ -1,15 +1,14 @@
-* {
+ /* {
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;
-}
+} */
 
-nav {
-    margin-left: 17px;
-    border-bottom: 2px solid rgb(149,149,149);
-    filter: blur(0px);
-    backdrop-filter: blur(17px);
-    position: sticky;
+* {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .logo {
@@ -17,34 +16,36 @@ nav {
     height: 61px;
 }
 
-/* .link1 {
-    width: 900px;
-    padding-left: 350px;
-} */
-.home {
-    margin: 0px 40px 0px 40px;
-    text-align: left;
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: 700;
+.nav-section {
+  position: sticky;
+  top: 0;
+  transition: 1s;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 100px;
+  border-bottom: 0.5px solid rgb(149,149,149);
+  filter: blur(0px);
+  backdrop-filter: blur(17px);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-.bootcamp {
-    margin: 0px 40px 0px 40px;
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: 700;
-    font-style: regular;
+header .menu_left {
+  display: flex;
+  margin: -10px;
 }
 
-
-.link {
-    margin: 0px 40px 0px 40px;
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: 700;
+header .menu_left .logo {
+  font-size: 2rem;
 }
 
+header .menu_left .nav_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 75px;
+}
 
 #t1 {
     background-color: #F5F5F5;
@@ -57,6 +58,12 @@ a:link {
     color: rgb(149,149,149);
     background-color: transparent;
     text-decoration: none;
+    transition: all ease 0.3s;
+    padding: 0 20px;
+    padding-top: 25px;
+    padding-left: 130px;
+    font-weight: 800;
+    font-size: 20px;
   }
   
   a:visited {
@@ -99,5 +106,5 @@ a:link {
 .main {
     margin-left: 500px;
     width: 300px;
-}
-
+} 
+  
