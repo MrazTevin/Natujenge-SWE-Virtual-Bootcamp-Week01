@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/billing.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/index.js"></script>
     <title>Tax Calculator App</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
 <div class="columns">
   <div class="column-wrapper position">
     <div>
-      <form action="/action_page.php">
+      <form id="salform">
         <label for="fname">Gross Salary</label>
         <input type="text" id="fname" name="firstname" placeholder="Gross Salary">
     
@@ -52,13 +53,15 @@
         </label>
         
       
-        <input type="submit" value="Calculate">
+        <input type="submit" id="entry" value="Calculate">
+        <input type="reset" value="Reset">
+
       </form>
     </div>
   </div>
   <div class="column-wrapper">
     <div class = "main">
-      <table id="style-table" style="border-bottom: none;">
+      <table id="style-table" class="main" style="border-bottom: none;">
         <thead>
           <tr>
             <th>Payslip</th>
@@ -71,14 +74,14 @@
           </tr>
           <tr>
               <td>Gross Salary</th>
-              <td> 50,000</td>
+              <td id="output"></td>
           </tr>
           <tr class="topics">
               <th>Deductions</th>
           </tr>
           <tr >
               <td>NSSF Contribution</th>
-              <td> 50,000</td>
+              <td id="output_nssf">1080</td>
           </tr>
           <tr>
               <td>NHIF Contribution</th>
@@ -89,11 +92,11 @@
           </tr>
           <tr>
               <td>Insurance Relief</th>
-              <td> 50,000</td>
+              <td>210</td>
           </tr>
           <tr>
               <td>Personal Relief</th>
-              <td> 50,000</td>
+              <td></td>
           </tr>
           <tr class="topics">
               <th>Taxable Pay</th>
@@ -113,7 +116,7 @@
     </div>
   </div>
   <div class="column-wrapper">
-    <div class="data">
+    <!-- <div class="data">
       <form>
           <legend><b>Gross Salary</b></legend>
           <label for="flabel"><b>Ksh</b></label>
@@ -127,7 +130,7 @@
           <option value="Rate 2">NSSF 2</option>
           </select>
       </form>
-    </div>
+    </div> -->
   </div>
 </div>
 <div class="i">
@@ -140,6 +143,8 @@
     
   </div>
 </div>
+
+
 
 
 
