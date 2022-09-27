@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/billing.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/index.js"></script>
     <title>Tax Calculator App</title>
 </head>
 <body>
@@ -26,70 +27,126 @@
   </header>
 </div>
 
-<div class = "main">
-	<table id="t1">
-        <tr>
-            <th colspan="2">Payslip</th>
-        </tr>
-        <tr class="topics">
-            <th>Income</th>
-            <td> Amount</td>
-        </tr>
-        <tr>
-            <td>Gross Salary</th>
-            <td> 50,000</td>
-        </tr>
-        <tr class="topics">
-            <th colspan="2">Deductions</th>
-        </tr>
-        <tr >
-            <td>NSSF Contribution</th>
-            <td> 50,000</td>
-        </tr>
-        <tr>
-            <td>NHIF Contribution</th>
-            <td> 50,000</td>
-        </tr>
-        <tr class="topics">
-            <th colspan="2">Reliefs</th>
-        </tr>
-        <tr>
-            <td>Insurance Relief</th>
-            <td> 50,000</td>
-        </tr>
-        <tr>
-            <td>Personal Relief</th>
-            <td> 50,000</td>
-        </tr>
-        <tr class="topics">
-            <th>Taxable Pay</th>
-            <td> 50,000</td>
-        </tr>
-        <tr>
-            <td>Pay as you Earn(PAYE)</th>
-            <td> 50,000</td>
-        </tr>
-        <tr class="topics">
-            <th>Net Income</th>
-            <td> 50,000</td>
-        </tr>
-    </table>
+
+<div class="columns">
+  <div class="column-wrapper position">
+    <div>
+      <form id="salform">
+        <label for="fname">Gross Salary</label>
+        <input type="text" id="fname" name="firstname" placeholder="Gross Salary">
+    
+        <label for="lname">Select Treat Salary As</label>
+        <select id="paytype" name="paytype">
+          <option value="netpay">Net Pay</option>
+          <option value="basicpay">Basic Pay</option>
+        </select>
+    
+        <label for="rates">Select NSSF Rates</label>
+        <select id="rates" name="rates">
+          <option value="old">Old NSSF Rates</option>
+          <option value="new">New NSSF Rates</option>
+        </select>
+        
+        <label class="container">Deduct NHIF
+          <input type="checkbox" style="margin-left:5px;">
+          <span class="checkmark"></span>
+        </label>
+        
+      
+        <input type="submit" id="entry" value="Calculate">
+        <input type="reset" value="Reset">
+
+      </form>
+    </div>
+  </div>
+  <div class="column-wrapper">
+    <div class = "main">
+      <table id="style-table" class="main" style="border-bottom: none;">
+        <thead>
+          <tr>
+            <th>Payslip</th>
+          </tr>
+        </thead>
+          <tbody>
+          <tr class="topics">
+              <th>Income</th>
+              <td> Amount</td>
+          </tr>
+          <tr>
+              <td>Gross Salary</th>
+              <td id="output"></td>
+          </tr>
+          <tr class="topics">
+              <th>Deductions</th>
+          </tr>
+          <tr >
+              <td>NSSF Contribution</th>
+              <td id="output_nssf">1080</td>
+          </tr>
+          <tr>
+              <td>NHIF Contribution</th>
+              <td> 50,000</td>
+          </tr>
+          <tr class="topics">
+              <th>Reliefs</th>
+          </tr>
+          <tr>
+              <td>Insurance Relief</th>
+              <td>210</td>
+          </tr>
+          <tr>
+              <td>Personal Relief</th>
+              <td></td>
+          </tr>
+          <tr class="topics">
+              <th>Taxable Pay</th>
+              <td> 50,000</td>
+          </tr>
+          <tr>
+              <td>Pay as you Earn(PAYE)</th>
+              <td> 50,000</td>
+          </tr>
+          <tr class="topics">
+              <th>Net Income</th>
+              <td> 50,000</td>
+          </tr>
+          </tbody>
+    
+        </table>
+    </div>
+  </div>
+  <div class="column-wrapper">
+    <!-- <div class="data">
+      <form>
+          <legend><b>Gross Salary</b></legend>
+          <label for="flabel"><b>Ksh</b></label>
+          <input type="number" placeholder="Enter your salary">
+          <input style="color:#00ff40" type="submit" value="Submit">
+      </form>
+      <form class="Nssf">
+          <p> <b>Select Your NSSF Rate</b> </p>
+          <select name="NSSF Rate">
+          <option value="Rate 1"> NSSF 1</option>
+          <option value="Rate 2">NSSF 2</option>
+          </select>
+      </form>
+    </div> -->
+  </div>
 </div>
-<div class="data">
-  <form>
-      <legend><b>Gross Salary</b></legend>
-      <label for="flabel"><b>Ksh</b></label>
-      <input type="number" placeholder="Enter your salary">
-      <input style="color:#00ff40" type="submit" value="Submit">
-  </form>
-  <form class="Nssf">
-      <p> <b>Select Your NSSF Rate</b> </p>
-      <select name="NSSF Rate">
-      <option value="Rate 1"> NSSF 1</option>
-      <option value="Rate 2">NSSF 2</option>
-      </select>
-  </form>
+<div class="i">
+  <div class = "i-left">
+   <div class="i-left-wrapper">
+  
+   </div>   
+  </div>
+  <div class ="i-right">
+    
+  </div>
 </div>
+
+
+
+
 
 
 
