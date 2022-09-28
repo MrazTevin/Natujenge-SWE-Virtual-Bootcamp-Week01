@@ -43,8 +43,24 @@ var PersonalRelief = 2400;
 var NHIFRelief = 210;
 var NHIFContribution = 2400;
 
-Deductions = PersonalRelief + NHIF_Relief + NHIFContribution + NSSF;
+var Deductions = PersonalRelief + NHIF_Relief + NHIFContribution + NSSF;
 
+
+function calculateTaxes(salary){
+    var tax = 0;
+    if(salary <= 24000){
+        tax = salary * 0.1
+    }
+    else if( salary <= (24000 + 8333)){
+        tax = 2400 + (salary - 24000) * 0.25;
+    }
+    else {
+        tax = 4483.25 + (salary - 32333) * 0.3;
+    }
+    paye = tax - Deductions;
+    return paye;
+
+}
 
 
 
