@@ -10,6 +10,9 @@ calculate.addEventListener('click', (e)=>{
     let insuarance_relief =Number(document.getElementById('insuarance_relief').innerHTML)
     let personal =Number(document.getElementById('personal').innerHTML)
     let taxable = document.getElementById('taxable')
+    let paye = document.getElementById('paye')
+    let net = document.getElementById('net')
+
     e.preventDefault()
 
     // get all the deductions
@@ -35,15 +38,18 @@ calculate.addEventListener('click', (e)=>{
         //a.if taxable pay is between 0 -24000
 
             if(taxablePay <=24000){
-                console.log( taxablePay -(taxablePay * 0.10))
+                paye.innerText= taxablePay * 0.10
+                net.innerText= taxablePay -(taxablePay * 0.10)
 
             }
             // b if taxaablepay is greater than 24000 less 32332
             else if( taxablePay >24000  || taxablePay<=32332 ){
-                console.log (taxablePay -(taxablePay * 0.25))
+                paye.innerText= taxablePay * 0.25
+                net.innerText= taxablePay -(taxablePay * 0.25)
             }
             else{
-                console.log(taxablePay -(taxable * 0.30))
+                paye.innerText= taxablePay * 0.30
+                net.innerText= taxablePay -(taxablePay * 0.30)
             }
 
 
