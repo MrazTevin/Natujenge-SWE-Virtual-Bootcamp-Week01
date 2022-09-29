@@ -106,6 +106,7 @@ a:link {
   font-size: 0.9em;
   min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
 }
 
 td{
@@ -130,13 +131,9 @@ td{
   text-align: center;
 }
 
-#style-table td, th{
-  padding: 12px 15px;
-}
-#style-table tbody tr.topics {
-  background-color:#1cb484;
+#style-table tbody tr.topics th, #style-table tbody tr.topics td{
+  background-color:#00a86a;
   color:white;
-  font-weight: bold;
   text-align: justify;
 }
 
@@ -148,17 +145,18 @@ td{
   background-color: #f3f3f3;
 }
 
-#styled-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
-}
-table th {
-  color: black;
-  text-align: center;
+table th, table td {
+  color: #ffffff;
+  font-weight: 400;
+  text-align: left;
+  padding: 7px 10px;
 }
 
 .main {
     /* margin-left: 200px; */
     width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(3px);
 } 
 
 .columns {
@@ -197,7 +195,7 @@ input[type=text], select {
 
 input[type=submit] {
   width:100%;
-  background-color:#1cb484;
+  background-color: #00a86a;
   color: white;
   padding: 14px 20px;
   margin: 4px 0;
@@ -209,7 +207,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color:#1cb484;
+  background-color: #00A86B;
 }
 
 input[type="reset"]{
