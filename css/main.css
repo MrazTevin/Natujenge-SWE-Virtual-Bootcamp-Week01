@@ -108,13 +108,10 @@ a:link {
     border-style: hidden !important;
   }
   #style-table tr {
-    /* background-color: #009879; */
-    /* color: #ffffff; */
     text-align: left;
   }
 
   #style-table thead tr {
-    /* background-color: #009879; */
     color: #ffffff;
     text-align: center;
     padding-top: 30px;
