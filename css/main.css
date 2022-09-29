@@ -20,6 +20,8 @@ body{
   position: sticky;
   top: 0;
   transition: 1s;
+  z-index: 1;
+  backdrop-filter: blur(120px);
 }
 header {
   background-color: transparent !important;
@@ -100,8 +102,8 @@ a:link {
 
  
 #style-table {
-  background-color: transparent !important;
-  backdrop-filter: blur(3px);
+  /* background-color: transparent !important; */
+  backdrop-filter: blur(30px);
   border-collapse: collapse;
   font-size: 0.9em;
   min-width: 400px;
