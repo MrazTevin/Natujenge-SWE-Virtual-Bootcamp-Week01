@@ -7,9 +7,12 @@
     <script src="https://kit.fontawesome.com/d5ef3b4315.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="./css/billing.css">
     <link rel="stylesheet" href="./css/main.css">
+ wil
     <script src="./js/index.js" defer></script>
     <script src="./js/tax.js" defer></script>
     <script src="./js/bill.js" defer></script>
+
+ development
     <title>Tax Calculator App</title>
 </head>
 <body>
@@ -34,7 +37,7 @@
 <div class="columns">
   <div class="column-wrapper position">
     <div>
-      <form id="salform">
+      <form id="salform" >
         <label for="fname">Gross Salary</label>
         <input type="text" id="fname" name="firstname" placeholder="Gross Salary">
     
@@ -57,7 +60,7 @@
         
       
         <input type="submit" id="entry" value="Calculate">
-        <input type="reset" value="Reset">
+        <!-- <input type="reset" value="Reset"> -->
 
       </form>
     </div>
@@ -87,33 +90,33 @@
               <td>NSSF Contribution</th>
               <td id="output_nssf">1080</td>
           </tr>
-          <tr>
+          <!-- <tr>
               <td>NHIF Contribution</th>
-              <td> 50,000</td>
-          </tr>
+              <td id="nhif_contribution"> 50,000</td>
+          </tr> -->
           <tr class="topics">
               <th>Reliefs</th>
               <td></td>
           </tr>
           <tr>
               <td>Insurance Relief</th>
-              <td>210</td>
+              <td id="insuarance_relief">210</td>
           </tr>
           <tr>
               <td>Personal Relief</th>
-              <td></td>
+              <td id="personal">2400</td>
           </tr>
           <tr class="topics">
               <th>Taxable Pay</th>
-              <td> 50,000</td>
+              <td id="taxable"> </td>
           </tr>
           <tr>
               <td>Pay as you Earn(PAYE)</th>
-              <td> 50,000</td>
+              <td id="paye"> </td>
           </tr>
           <tr class="topics">
               <th>Net Income</th>
-              <td> 50,000</td>
+              <td id="net"> </td>
           </tr>
           </tbody>
     
@@ -132,7 +135,9 @@
     
   </div>
 </div>
+ wil
 
+ development
 <!-- billing -->
     <section id="billing">
         <div class="top">
@@ -227,5 +232,9 @@
     <footer>
       <p class="foot">&copy 2022 Powered by Natujenge</p>
   </footer>
+
+
+  <script src="./js/jules.js"></script>
+
 </body>
 </html>
