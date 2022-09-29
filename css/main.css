@@ -5,6 +5,9 @@
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body{
   background-color: #18224b;
 }
 
@@ -90,31 +93,41 @@ a:link {
     backdrop-filter: blur(7px);
 }
 
-  .foot {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
+.foot {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
  
-  #style-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  }
+#style-table {
+  background-color: transparent !important;
+  backdrop-filter: blur(3px);
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
 
-  td {
-    border-style: hidden !important;
-  }
-  #style-table tr {
-    text-align: left;
-  }
+td{
+  border-style: hidden !important;
+}
+#style-table tr{
+  text-align: left;
+}
 
-  #style-table thead tr {
-    color: #ffffff;
-    text-align: center;
-    padding-top: 30px;
+#style-table thead{
+  margin: 0;
+}
+
+#style-table thead tr{
+  color: #ffffff;
+  text-align: center;
+}
+
+#style-table thead tr th{
+  padding: 1em;
+  padding-left: calc(8rem);
+  text-align: center;
 }
 
 #style-table td, th{
@@ -179,6 +192,7 @@ input[type=text], select {
   border-radius: 4px;
   box-sizing: border-box;
   color: rgb(116, 110, 110);
+  background-color: transparent;
 }
 
 input[type=submit] {
@@ -204,6 +218,7 @@ input[type="reset"]{
   border-radius: 5px;
   border: 2px solid #00A86B;
   color: #00A86B;
+  background-color: transparent;
   cursor: pointer;
 }
 
