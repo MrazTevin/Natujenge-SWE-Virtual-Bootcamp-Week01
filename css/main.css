@@ -198,6 +198,21 @@ input[type=submit]:hover {
   background-color:#1cb484;
 }
 
+input[type="reset"]{
+  padding: 0.5em 1em;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 2px solid #00A86B;
+  color: #00A86B;
+  cursor: pointer;
+}
+
+input[type="reset"]:hover{
+  background-color: #00A86B;
+  color: #ffffff;
+  font-size: .85em;
+}
+
 form {
   width: 100%;
   padding-left: 50px;
