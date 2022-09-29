@@ -46,5 +46,12 @@ var NHIFContribution = 2400;
 Deductions = PersonalRelief + NHIF_Relief + NHIFContribution + NSSF;
 
 
-
+//side navigation functionality
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
 

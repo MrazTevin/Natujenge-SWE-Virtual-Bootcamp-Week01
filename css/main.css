@@ -181,7 +181,7 @@ input[type=text], select {
   box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=submit], input[type=reset] {
   width:100%;
   background-color:#1db483;
   color: white;
@@ -194,7 +194,7 @@ input[type=submit] {
   box-sizing: border-box;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, input[type=reset]:hover {
   background-color:#1db483;
 }
 
@@ -226,5 +226,105 @@ When the checkbox is checked, add a blue background
   content: "";
   position: absolute;
   display: none;
+}
+
+/* Responsitivity by jackson */
+
+.open-nav{
+  display: flex;
+  padding:20px;
+}
+.open-nav span{
+  
+  margin: 10px;
+  display: inline-block;
+  margin-top:20px
+}
+.open-nav a img{
+  margin: 10px;
+  display: inline-block;
+}
+@media screen and (min-width:1024px){
+  .open-nav{
+    display: none;
+  }
+}
+
+@media  screen and (max-width: 1023px) {
+  .nav-section{
+    display: none;
+  }
+  .open-nav{
+    display: normal;
+  }
+  
+}
+@media (max-width: 1280px) and (min-width:1024px) {
+  .nav_links a{
+    padding:40px
+  } 
+}
+@media screen  and (max-width:1000px) {
+  form input{
+    width:100%;
+
+  }
+  .salform{
+    padding:5px;
+  }
+  #style-table {
+    min-width: auto;
+  }
+  section .btn {
+    display:flex
+  }
+  section .btn button{
+    margin: 2px;
+    padding:2px;
+    display: inline-block
+  }
+
+}
+
+
+/* Side nav CSS*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
