@@ -22,7 +22,7 @@
 var entry = document.getElementById("entry");
 entry.addEventListener("click", getGrossSalary);
 
-function getGrossSalary() {
+function getGrossSalary(e) {
     var salary = document.getElementById("fname").value;
 
     if(!salary) {

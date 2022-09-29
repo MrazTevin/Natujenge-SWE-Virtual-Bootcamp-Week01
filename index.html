@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/billing.css">
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/index.js"></script>
     <title>Tax Calculator App</title>
 </head>
 <body>
@@ -31,7 +30,7 @@
 <div class="columns">
   <div class="column-wrapper position">
     <div>
-      <form id="salform" onsubmit="return false">
+      <form id="salform" >
         <label for="fname">Gross Salary</label>
         <input type="text" id="fname" name="firstname" placeholder="Gross Salary">
     
@@ -53,7 +52,7 @@
         </label>
         
       
-        <input type="submit" id="entry" value="Calculate" onclick="getGrossSalary()">
+        <input type="submit" id="entry" value="Calculate">
         <!-- <input type="reset" value="Reset"> -->
 
       </form>
@@ -83,24 +82,24 @@
               <td>NSSF Contribution</th>
               <td id="output_nssf">1080</td>
           </tr>
-          <tr>
+          <!-- <tr>
               <td>NHIF Contribution</th>
-              <td> 50,000</td>
-          </tr>
+              <td id="nhif_contribution"> 50,000</td>
+          </tr> -->
           <tr class="topics">
               <th>Reliefs</th>
           </tr>
           <tr>
               <td>Insurance Relief</th>
-              <td>210</td>
+              <td id="insuarance_relief">210</td>
           </tr>
           <tr>
               <td>Personal Relief</th>
-              <td></td>
+              <td id="personal">2400</td>
           </tr>
           <tr class="topics">
               <th>Taxable Pay</th>
-              <td> 50,000</td>
+              <td id="taxable"> 50,000</td>
           </tr>
           <tr>
               <td>Pay as you Earn(PAYE)</th>
@@ -205,5 +204,9 @@
       <p class="foot">&copy 2022</p>
       <p class="foot">Powered by Natujenge</p>
   </footer>
+
+
+  <script src="./js/jules.js"></script>
+
 </body>
 </html>
