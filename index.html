@@ -15,7 +15,7 @@
 <div class="nav-section" >
   <header>
       <div class="menu_left">
-          <div class="logo" href="index.html">
+          <div class="logo">
               <a><img class="logo" src="res/logo.svg" alt="Natujenge"/></a>
           </div>
           <nav class="nav_links">
@@ -27,11 +27,25 @@
   </header>
 </div>
 
+<!--side bar navigation-->
+<div id="mySidenav" class="sidenav">
+      
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="https://meliora.co.ke/articles/dfc1312e">Bootcamp</a>
+      <a href="team_page.html">Team</a>
+</div>
+<div class="open-nav" >
+      <span   style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      <a><img class="logo" src="res/logo.svg" alt="Natujenge"/></a>
+</div>
+<hr>
+
 
 <div class="columns">
-  <div class="column-wrapper position">
+  <div class="column-wrapper position salform">
     <div>
-      <form id="salform" onsubmit="return false">
+      <form id="salform">
         <label for="fname">Gross Salary</label>
         <input type="text" id="fname" name="firstname" placeholder="Gross Salary">
     
@@ -53,13 +67,13 @@
         </label>
         
       
-        <input type="submit" id="entry" value="Calculate" onclick="getGrossSalary()">
-        <!-- <input type="reset" value="Reset"> -->
+        <input type="submit" id="entry" value="Calculate">
+        <input type="reset" value="Reset">
 
       </form>
     </div>
   </div>
-  <div class="column-wrapper">
+  <div class="column-wrapper table ">
     <div class = "main">
       <table id="style-table" class="main" style="border-bottom: none;">
         <thead>
@@ -143,6 +157,13 @@
     
   </div>
 </div>
+
+
+
+
+
+
+
 <!-- billing -->
     <section id="billing">
         <div class="top">
