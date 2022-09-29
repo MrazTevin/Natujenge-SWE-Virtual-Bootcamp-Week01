@@ -178,6 +178,7 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  color: rgb(116, 110, 110);
 }
 
 input[type=submit] {
@@ -217,7 +218,7 @@ form {
 
 When the checkbox is checked, add a blue background
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #00A86B;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -226,4 +227,3 @@ When the checkbox is checked, add a blue background
   position: absolute;
   display: none;
 }
-
