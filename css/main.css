@@ -117,31 +117,31 @@ a:link {
     padding-top: 30px;
 }
 
-  #style-table td, th{
-    padding: 12px 15px;
-  }
-  #style-table tbody tr.topics {
-    background-color:#1cb484;
-    color:white;
-    font-weight: bold;
-    text-align: justify;
-  }
+#style-table td, th{
+  padding: 12px 15px;
+}
+#style-table tbody tr.topics {
+  background-color:#1cb484;
+  color:white;
+  font-weight: bold;
+  text-align: justify;
+}
 
-  #styled-table tbody tr {
-    border-bottom:none;
-      }
+#styled-table tbody tr {
+  border-bottom:none;
+}
 
 #styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
 #styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-  }
-  table th {
-    color: black;
-    text-align: center;
-  }
+  border-bottom: 2px solid #009879;
+}
+table th {
+  color: black;
+  text-align: center;
+}
 
 .main {
     /* margin-left: 200px; */
