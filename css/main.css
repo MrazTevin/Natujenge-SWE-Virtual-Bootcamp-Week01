@@ -1,14 +1,11 @@
- /* {
-    box-sizing: border-box;
-    margin: 0;
-    scroll-behavior: smooth;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  background-color: #18224b;
 }
 
 .logo {
@@ -22,18 +19,17 @@
   transition: 1s;
 }
 header {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 100px;
-  border-bottom: 0.5px solid rgb(149,149,149);
+  background-color: transparent !important;
+  padding: 10px 5px 20px 85px;
+  border-bottom: 0.5px solid #00a86a86;
   filter: blur(0px);
-  backdrop-filter: blur(17px);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  /* backdrop-filter: blur(7px); */
+  /* box-shadow: 0 2px 2px 0 rgba(0, 168, 106, 0.13); */
 }
 
-header .menu_left {
+.menu_left {
   display: flex;
-  margin: -10px;
+  justify-content: space-between;
 }
 
 header .menu_left .logo {
@@ -47,30 +43,28 @@ header .menu_left .nav_links {
   padding: 0 75px;
 }
 
-/* #t1 {
-    background-color: #F5F5F5;
-} */
-
-
-
+a{
+  color: #00A86B;
+}
 
 a:link {
-    color: rgb(149,149,149);
+    color: #00A86B;
     background-color: transparent;
     text-decoration: none;
     transition: all ease 0.3s;
-    padding: 0 20px;
+    padding: 0 5px;
     padding-top: 25px;
-    padding-left: 130px;
-    font-weight: 800;
-    font-size: 20px;
+    padding-left: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
   }
   
-  a:visited {
-    color: rgb(149,149,149);
+  /* a:visited {
+    color: #18224b;
     background-color: transparent;
     text-decoration: none;
-  }
+  } */
   
   a:hover {
     color: #00A86B;
@@ -88,9 +82,12 @@ a:link {
     width: 100%;
     bottom: 0;
     position: fixed;
-    margin: 5px;
-    background-color: #E5E4E2;
+    background-color: transparent;
     text-align: center;
+    padding: 15px 0;
+    color: #000000; 
+    border-top: 0.5px solid #00a86a86;
+    backdrop-filter: blur(7px);
 }
 
   .foot {
@@ -127,7 +124,7 @@ a:link {
     padding: 12px 15px;
   }
   #style-table tbody tr.topics {
-    background-color:#1db483;
+    background-color:#1cb484;
     color:white;
     font-weight: bold;
     text-align: justify;
@@ -171,6 +168,11 @@ a:link {
   padding: 50px;
 }
 
+#salform label{
+  color: #ffffff;
+  font-weight: 200;
+}
+
 input[type=text], select {
   width: 100%;
   padding: 10px 20px;
@@ -183,7 +185,7 @@ input[type=text], select {
 
 input[type=submit] {
   width:100%;
-  background-color:#1db483;
+  background-color:#1cb484;
   color: white;
   padding: 14px 20px;
   margin: 4px 0;
@@ -195,7 +197,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color:#1db483;
+  background-color:#1cb484;
 }
 
 form {
