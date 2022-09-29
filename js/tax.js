@@ -6,5 +6,4 @@ function calculateTax() {
 
     document.getElementById("entry").addEventListener(
         "click",calculateTax);
-
 }

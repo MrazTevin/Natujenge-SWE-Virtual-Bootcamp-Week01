@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/d5ef3b4315.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d5ef3b4315.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="./css/billing.css">
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/tax.js" defer></script>
+    <script src="./js/bill.js" defer></script>
     <title>Tax Calculator App</title>
 </head>
 <body>
@@ -131,12 +133,6 @@
   </div>
 </div>
 
-
-
-
-
-
-
 <!-- billing -->
     <section id="billing">
         <div class="top">
@@ -146,8 +142,13 @@
             </div>
 
             <div class="btn">
-              <button>Add bills</button>
+              <button id="myBtn" type="submit">Add bills</button>
             </div>
+        </div>
+        <div class="containers">
+          <div class="mains">
+
+          </div>
         </div>
         <!-- table -->
     <table class="billingTable">
@@ -165,7 +166,7 @@
           <!-- <td>28/9/2022</td> -->
           <td>4000</td>
           <td class="action">
-            <a id="#" class="t-edit"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a id="#" class="t-edit"><i  class="edit fa-solid fa-pen-to-square"></i></a>
             <a id="#" class="t-delete"><i class="fa-solid fa-trash-can"></i></a>
           </td>
 
@@ -175,7 +176,7 @@
           <!-- <td>28/9/2022</td> -->
           <td>12000</td>
           <td class="action">
-            <a id="#" class="t-edit"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a id="#" class="t-edit"><i class="edit fa-solid fa-pen-to-square"></i></a>
             <a id="#" class="t-delete"><i class="fa-solid fa-trash-can"></i></a>
           </td>
 
@@ -185,7 +186,7 @@
           <!-- <td>28/9/2022</td> -->
           <td>4500</td>
           <td class="action">
-            <a id="#" class="t-edit"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a id="#" class="t-edit"><i class="edit fa-solid fa-pen-to-square"></i></a>
             <a id="#" class="t-delete"><i class="fa-solid fa-trash-can"></i></a>
           </td>
 
@@ -193,6 +194,32 @@
         
       </tbody>
     </table>
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="" autocomplete="off" id="bills-form">
+          <div class="data">
+
+              <div class="data-two">
+                  <label for="e-bill">Enter a new bill</label><br>
+                  <input type="Text" id="e-bill"><br><br>
+              </div>
+
+              <div class="data-two">
+                  <label for="e-amount">Amount</label><br>
+                  <input type="number" name="" id="e-amount"><br><br>
+              </div>
+
+              <input type="submit" value="submit" id="submit">
+
+          </div>
+        </form>
+      </div>
+    
+  </div>         
 
     </section>
     <footer>

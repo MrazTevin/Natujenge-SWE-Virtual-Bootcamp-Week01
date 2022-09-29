@@ -43,7 +43,7 @@ var PersonalRelief = 2400;
 var NHIFRelief = 210;
 var NHIFContribution = 2400;
 
-Deductions = PersonalRelief + NHIF_Relief + NHIFContribution + NSSF;
+Deductions = PersonalRelief + NHIFRelief + NHIFContribution + NSSF;
 
 
 
