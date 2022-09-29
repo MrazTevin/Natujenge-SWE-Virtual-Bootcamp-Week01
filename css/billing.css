@@ -5,7 +5,8 @@
 }
 
 #billing{
-    height: 61vh;
+    min-height: 15vh;
+    margin-bottom: calc(8em);
 }
 
 .top{
@@ -13,7 +14,7 @@
     justify-content: space-between;
     height: 15%;
     align-items: center;
-    margin: 20px 60px
+    margin: 20px 12.5em;
 }
 
 .btn button{
@@ -27,66 +28,79 @@
 .btn button:first-child{
     background-color: #047857;
     margin-right: 10px;
-}
-
-.btn button:last-child{
-    background-color: #D9534F;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #18224b;
 }
 
 .subtitle p{
     color: #64748B;
-    font-size: 14px;
-
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .subtitle h3{
-    font-size: 23px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 600;
+    color: #00a86a;
 }
 
 /* biiling table */
-table,  td, tr{
-    border-bottom: solid 1px #000;
+.main table, .main table td, .main table td tr{
+    border-bottom: solid 1px #fff;
     padding: 10px 0;
-
   }
 
 
 table.billingTable {
-
-  border-collapse: collapse;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #fff;
   color: black;
   margin: 20px auto;
-  width: 90%;
+  width: 70%;
   font-size: 13px;
-
 }
 
 table.billingTable td, table.billingTable th {
-  
   border-bottom: 1px solid lightgray
-
 }
 table th{
     color:#D9534F;
     margin-right: 100px;
     padding: 0;
     color: #64748B;
-    font-size: 15px;
-
-    
+    font-size: 15px; 
 }
 
 thead{
     margin-left: 0;
     margin-right: 100px;
     padding: 0;
-
 }
 td{
     padding: 10px;
     border-left: 1px solid lightgray
+}
+
+.action{
+    display: flex;
+    justify-content: space-between;
+}
+
+.action a{
+    font-size: 1.4em;
+}
+
+.action .t-delete{
+    color: #D9534F;
+}
+
+.action .t-edit{
+    color: #00a86a;
+}
+
+.action .t-edit:hover, .action .t-delete:hover{
+    font-size: 1.45em;
 }
 
 .paid span {
@@ -101,11 +115,3 @@ td{
     border-radius: 6px;
     padding: 3px 
 }
-
-
-
-
-
-
-  
-  
