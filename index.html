@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d5ef3b4315.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="./css/billing.css">
     <link rel="stylesheet" href="./css/main.css">
+ wil
+    <script src="./js/index.js" defer></script>
+    <script src="./js/tax.js" defer></script>
+    <script src="./js/bill.js" defer></script>
+
+ development
     <title>Tax Calculator App</title>
 </head>
 <body>
@@ -60,10 +67,10 @@
   </div>
   <div class="column-wrapper">
     <div class = "main">
-      <table id="style-table" class="main" style="border-bottom: none;">
+      <table id="style-table" style="border-bottom: none;">
         <thead>
           <tr>
-            <th>Payslip</th>
+           <th><span>Payslip</span></th>
           </tr>
         </thead>
           <tbody>
@@ -77,6 +84,7 @@
           </tr>
           <tr class="topics">
               <th>Deductions</th>
+              <td></td>
           </tr>
           <tr >
               <td>NSSF Contribution</th>
@@ -88,6 +96,7 @@
           </tr> -->
           <tr class="topics">
               <th>Reliefs</th>
+              <td></td>
           </tr>
           <tr>
               <td>Insurance Relief</th>
@@ -114,23 +123,7 @@
         </table>
     </div>
   </div>
-  <div class="column-wrapper">
-    <!-- <div class="data">
-      <form>
-          <legend><b>Gross Salary</b></legend>
-          <label for="flabel"><b>Ksh</b></label>
-          <input type="number" placeholder="Enter your salary">
-          <input style="color:#00ff40" type="submit" value="Submit">
-      </form>
-      <form class="Nssf">
-          <p> <b>Select Your NSSF Rate</b> </p>
-          <select name="NSSF Rate">
-          <option value="Rate 1"> NSSF 1</option>
-          <option value="Rate 2">NSSF 2</option>
-          </select>
-      </form>
-    </div> -->
-  </div>
+
 </div>
 <div class="i">
   <div class = "i-left">
@@ -142,67 +135,102 @@
     
   </div>
 </div>
+ wil
+
+ development
 <!-- billing -->
     <section id="billing">
         <div class="top">
-          
             <div class="subtitle">
-                <h3>Billing</h3>
+                <h3>Bill Manager</h3>
                 <p>Manage your billing and payment details</p>
             </div>
 
             <div class="btn">
-                <button>+ Add</button>
-                <button>- Remove</button>
+              <button id="myBtn" type="submit">Add bills</button>
             </div>
         </div>
+        <div class="containers">
+          <div class="mains">
 
+          </div>
+        </div>
+        
         <!-- table -->
 
-    
     <table class="billingTable">
       <thead>
         <tr>
           <th>Category</th>
-          <th>Billing Date</th>
-          <th>Status</th>
+          <!-- <th>Date</th> -->
           <th>Amount</th>
-
+          <th>Action</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="myTable">
         <tr>
           <td>Food</td>
-          <td>2/7/2022</td>
-          <td class="paid"><span>paid</span></td>
-          <td>$3500</td>
+          <!-- <td>28/9/2022</td> -->
+          <td>4000</td>
+          <td class="action">
+            <a id="#" class="t-edit"><i  class="edit fa-solid fa-pen-to-square"></i></a>
+            <a id="#" class="t-delete"><i class="fa-solid fa-trash-can"></i></a>
+          </td>
 
         </tr>
         <tr>
           <td>Rent</td>
-          <td>2/7/2022</td>
-          <td class="paid"><span>paid</span></td>
-          <td>$3500</td>
+          <!-- <td>28/9/2022</td> -->
+          <td>12000</td>
+          <td class="action">
+            <a id="#" class="t-edit"><i class="edit fa-solid fa-pen-to-square"></i></a>
+            <a id="#" class="t-delete"><i class="fa-solid fa-trash-can"></i></a>
+          </td>
 
         </tr>
         <tr>
           <td>Shopping</td>
-          <td>2/7/2022</td>
-          <td class="unpaid"><span>unpaid</span></td>
-          <td>$3500</td>
+          <!-- <td>28/9/2022</td> -->
+          <td>4500</td>
+          <td class="action">
+            <a id="#" class="t-edit"><i class="edit fa-solid fa-pen-to-square"></i></a>
+            <a id="#" class="t-delete"><i class="fa-solid fa-trash-can"></i></a>
+          </td>
 
         </tr>
         
       </tbody>
     </table>
-    <!-- Codes by Quackit.com -->
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="" autocomplete="off" id="bills-form">
+          <div class="data">
+
+              <div class="data-two">
+                  <label for="e-bill">Enter a new bill</label><br>
+                  <input type="Text" id="e-bill"><br><br>
+              </div>
+
+              <div class="data-two">
+                  <label for="e-amount">Amount</label><br>
+                  <input type="number" name="" id="e-amount"><br><br>
+              </div>
+
+              <input type="submit" value="submit" id="submit">
+
+          </div>
+        </form>
+      </div>
     
-    
+  </div>         
 
     </section>
     <footer>
-      <p class="foot">&copy 2022</p>
-      <p class="foot">Powered by Natujenge</p>
+      <p class="foot">&copy 2022 Powered by Natujenge</p>
   </footer>
 
 
