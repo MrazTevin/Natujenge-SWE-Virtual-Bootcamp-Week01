@@ -43,7 +43,11 @@ var PersonalRelief = 2400;
 var NHIFRelief = 210;
 var NHIFContribution = 2400;
 
+ wil
+Deductions = PersonalRelief + NHIFRelief + NHIFContribution + NSSF;
+
 var Deductions = PersonalRelief + NHIF_Relief + NHIFContribution + NSSF;
+ development
 
 
 function calculateTaxes(salary){

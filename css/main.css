@@ -1,14 +1,14 @@
- /* {
-    box-sizing: border-box;
-    margin: 0;
-    scroll-behavior: smooth;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body{
+  background-color: #18224b;
 }
 
 .logo {
@@ -20,20 +20,21 @@
   position: sticky;
   top: 0;
   transition: 1s;
+  z-index: 1;
+  backdrop-filter: blur(120px);
 }
 header {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 100px;
-  border-bottom: 0.5px solid rgb(149,149,149);
+  background-color: transparent !important;
+  padding: 10px 5px 20px 85px;
+  border-bottom: 0.5px solid #00a86a86;
   filter: blur(0px);
-  backdrop-filter: blur(17px);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  /* backdrop-filter: blur(7px); */
+  /* box-shadow: 0 2px 2px 0 rgba(0, 168, 106, 0.13); */
 }
 
-header .menu_left {
+.menu_left {
   display: flex;
-  margin: -10px;
+  justify-content: space-between;
 }
 
 header .menu_left .logo {
@@ -47,35 +48,35 @@ header .menu_left .nav_links {
   padding: 0 75px;
 }
 
-/* #t1 {
-    background-color: #F5F5F5;
-} */
-
-
-
+a{
+  color: #00A86B;
+}
 
 a:link {
-    color: rgb(149,149,149);
-    background-color: transparent;
-    text-decoration: none;
-    transition: all ease 0.3s;
-    padding: 0 20px;
-    padding-top: 25px;
-    padding-left: 130px;
-    font-weight: 800;
-    font-size: 20px;
-  }
-  
-  a:visited {
-    color: rgb(149,149,149);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  a:hover {
     color: #00A86B;
     background-color: transparent;
     text-decoration: none;
+    transition: all ease 0.3s;
+    padding: 0 5px;
+    padding-top: 25px;
+    padding-left: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  /* a:visited {
+    color: #18224b;
+    background-color: transparent;
+    text-decoration: none;
+  } */
+  
+  a:hover {
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.15em;
   }
   
   a:active {
@@ -88,70 +89,78 @@ a:link {
     width: 100%;
     bottom: 0;
     position: fixed;
-    margin: 5px;
-    background-color: #E5E4E2;
+    background-color: transparent;
     text-align: center;
+    padding: 15px 0;
+    color: #000000; 
+    border-top: 0.5px solid #00a86a86;
+    backdrop-filter: blur(7px);
 }
 
-  .foot {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
+.foot {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
  
-  #style-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  }
-
-  td {
-    border-style: hidden !important;
-  }
-  #style-table tr {
-    /* background-color: #009879; */
-    /* color: #ffffff; */
-    text-align: left;
-  }
-
-  #style-table thead tr {
-    /* background-color: #009879; */
-    color: #ffffff;
-    text-align: center;
-    padding-top: 30px;
+#style-table {
+  /* background-color: transparent !important; */
+  backdrop-filter: blur(30px);
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
 }
 
-  #style-table td, th{
-    padding: 12px 15px;
-  }
-  #style-table tbody tr.topics {
-    background-color:#1db483;
-    color:white;
-    font-weight: bold;
-    text-align: justify;
-  }
+td{
+  border-style: hidden !important;
+}
+#style-table tr{
+  text-align: left;
+}
 
-  #styled-table tbody tr {
-    border-bottom:none;
-      }
+#style-table thead{
+  margin: 0;
+}
+
+#style-table thead tr{
+  color: #ffffff;
+  text-align: center;
+}
+
+#style-table thead tr th{
+  padding: 1em;
+  padding-left: calc(8rem);
+  text-align: center;
+}
+
+#style-table tbody tr.topics th, #style-table tbody tr.topics td{
+  background-color:#00a86a;
+  color:white;
+  text-align: justify;
+}
+
+#styled-table tbody tr {
+  border-bottom:none;
+}
 
 #styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
-#styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-  }
-  table th {
-    color: black;
-    text-align: center;
-  }
+table th, table td {
+  color: #ffffff;
+  font-weight: 400;
+  text-align: left;
+  padding: 7px 10px;
+}
 
 .main {
     /* margin-left: 200px; */
     width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(3px);
 } 
 
 .columns {
@@ -171,6 +180,11 @@ a:link {
   padding: 50px;
 }
 
+#salform label{
+  color: #ffffff;
+  font-weight: 200;
+}
+
 input[type=text], select {
   width: 100%;
   padding: 10px 20px;
@@ -179,11 +193,13 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  color: rgb(116, 110, 110);
+  background-color: transparent;
 }
 
 input[type=submit] {
   width:100%;
-  background-color:#1db483;
+  background-color: #00a86a;
   color: white;
   padding: 14px 20px;
   margin: 4px 0;
@@ -195,7 +211,23 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color:#1db483;
+  background-color: #00A86B;
+}
+
+input[type="reset"]{
+  padding: 0.5em 1em;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 2px solid #00A86B;
+  color: #00A86B;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input[type="reset"]:hover{
+  background-color: #00A86B;
+  color: #ffffff;
+  font-size: .85em;
 }
 
 form {
@@ -218,7 +250,7 @@ form {
 
 When the checkbox is checked, add a blue background
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #00A86B;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -227,4 +259,3 @@ When the checkbox is checked, add a blue background
   position: absolute;
   display: none;
 }
-
