@@ -27,9 +27,6 @@ calculate.addEventListener('click', (e)=>{
     //change the inner text of texable pay
     taxable.innerText=taxablePay
 
-
-
-
     console.log(`${gross} gross`)
     console.log(`${deductions} deductions`)
     console.log(`${taxablePay} taxabalepay`)
@@ -51,12 +48,7 @@ calculate.addEventListener('click', (e)=>{
                 paye.innerText= taxablePay * 0.30
                 net.innerText= taxablePay -(taxablePay * 0.30)
             }
-
-
-
-
-   
-    
+ 
 })
 
    
