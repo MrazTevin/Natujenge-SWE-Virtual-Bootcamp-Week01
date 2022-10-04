@@ -18,7 +18,15 @@ jobs:
         with:
           node-version: "10.x"
       - run: npm install
-      - run 
+      - run: npm run build
+      - run: npm test
+      - name: Deploy
+        with:
+          target_branch: gh-pages
+          build_dir: build
+            
+
+
 
   # steps:
   #   name: checkout
