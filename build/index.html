@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d5ef3b4315.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="./css/billing.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/bill.js" defer></script>
+    <title>Tax Calculator App</title>
+</head>
+<body>
+    
+<!-- navigation-->
+<div class="nav-section" >
+  <header>
+      <div class="menu_left">
+          <div class="logo" href="index.html">
+              <a><img class="logo" src="res/natulogo.svg" alt="Natujenge"/></a>
+          </div>
+          <nav class="nav_links">
+              <a class="home" href="index.html">Home</a>
+              <a class="bootcamp" href="https://meliora.co.ke/articles/dfc1312e">Bootcamp</a>
+              <a class="link" href="team_page.html">Team</a>
+          </nav>
+      </div>
+  </header>
+</div>
+
+
+<div class="columns">
+  <div class="column-wrapper position">
+    <div>
+      <form id="salform" >
+        <label for="fname">Gross Salary</label>
+        <input type="text" id="fname" name="firstname" placeholder="Gross Salary">
+    
+        <label for="lname">Select Treat Salary As</label>
+        <select id="paytype" name="paytype">
+          <option value="netpay">Net Pay</option>
+          <option value="basicpay">Basic Pay</option>
+        </select>
+    
+        <label for="rates">Select NSSF Rates</label>
+        <select id="rates" name="rates">
+          <option value="old">Old NSSF Rates</option>
+          <option value="new">New NSSF Rates</option>
+        </select>
+        
+        <label class="container">Deduct NHIF
+          <input type="checkbox" style="margin-left:5px;">
+          <span class="checkmark"></span>
+        </label>
+        
+      
+        <input type="submit" id="entry" value="Calculate">
+        <!-- <input type="reset" value="Reset"> -->
+
+      </form>
+    </div>
+  </div>
+  <div class="column-wrapper">
+    <div class = "main">
+      <table id="style-table" style="border-bottom: none;">
+        <thead>
+          <tr>
+           <th><span>Payslip</span></th>
+          </tr>
+        </thead>
+          <tbody>
+          <tr class="topics">
+              <th>Income</th>
+              <td> Amount</td>
+          </tr>
+          <tr>
+              <td>Gross Salary</th>
+              <td id="output"></td>
+          </tr>
+          <tr class="topics">
+              <th>Deductions</th>
+              <td></td>
+          </tr>
+          <tr >
+              <td>NSSF Contribution</th>
+              <td id="output_nssf">1080</td>
+          </tr>
+          <!-- <tr>
+              <td>NHIF Contribution</th>
+              <td id="nhif_contribution"> 50,000</td>
+          </tr> -->
+          <tr class="topics">
+              <th>Reliefs</th>
+              <td></td>
+          </tr>
+          <tr>
+              <td>Insurance Relief</th>
+              <td id="insuarance_relief">210</td>
+          </tr>
+          <tr>
+              <td>Personal Relief</th>
+              <td id="personal">2400</td>
+          </tr>
+          <tr class="topics">
+              <th>Taxable Pay</th>
+              <td id="taxable"> </td>
+          </tr>
+          <tr>
+              <td>Pay as you Earn(PAYE)</th>
+              <td id="paye"> </td>
+          </tr>
+          <tr class="topics">
+              <th>Net Income</th>
+              <td id="net"> </td>
+          </tr>
+          </tbody>
+    
+        </table>
+    </div>
+  </div>
+
+</div>
+<div class="i">
+  <div class = "i-left">
+   <div class="i-left-wrapper">
+  
+   </div>   
+  </div>
+  <div class ="i-right">
+    
+  </div>
+</div>
+
+<!-- billing -->
+    <section id="billing">
+        <div class="top">
+            <div class="subtitle">
+                <h3>Bill Manager</h3>
+                <p>Manage your billing and payment details</p>
+            </div>
+
+            <div class="btn">
+              <button id="myBtn" type="submit">Add bills</button>
+            </div>
+        </div>
+        <div class="containers">
+          <div class="mains">
+
+          </div>
+        </div>
+        
+        <!-- table -->
+
+    <table class="billingTable">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <!-- <th>Date</th> -->
+          <th>Amount</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        <tr>
+          <td>Food</td>
+          <!-- <td>28/9/2022</td> -->
+          <td>4000</td>
+          <td class="action">
+            <a id="#" class="t-edit"><i  class="edit fa-solid fa-pen-to-square"></i></a>
+            <a id="#" class="t-delete"><i class="fa-solid fa-trash-can"></i></a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>Rent</td>
+          <!-- <td>28/9/2022</td> -->
+          <td>12000</td>
+          <td class="action">
+            <a id="#" class="t-edit"><i class="edit fa-solid fa-pen-to-square"></i></a>
+            <a id="#" class="t-delete"><i class="fa-solid fa-trash-can"></i></a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>Shopping</td>
+          <!-- <td>28/9/2022</td> -->
+          <td>4500</td>
+          <td class="action">
+            <a id="#" class="t-edit"><i class="edit fa-solid fa-pen-to-square"></i></a>
+            <a id="#" class="t-delete"><i class="fa-solid fa-trash-can"></i></a>
+          </td>
+
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="" autocomplete="off" id="bills-form">
+          <div class="data">
+
+              <div class="data-two">
+                  <label for="e-bill">Enter a new bill</label><br>
+                  <input type="Text" id="e-bill"><br><br>
+              </div>
+
+              <div class="data-two">
+                  <label for="e-amount">Amount</label><br>
+                  <input type="number" name="" id="e-amount"><br><br>
+              </div>
+
+              <input type="submit" value="submit" id="submit">
+
+          </div>
+        </form>
+      </div>
+    
+  </div>         
+
+    </section>
+    <footer>
+      <p class="foot">&copy 2022 Powered by Natujenge</p>
+  </footer>
+
+
+  <script src="./js/jules.js"></script>
+
+</body>
+</html>
